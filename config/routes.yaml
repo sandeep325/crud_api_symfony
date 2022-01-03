@@ -1,0 +1,30 @@
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+
+customer_list:
+  path: api/customers
+  controller: App\Controller\CustomerController:indexAction
+  methods: [GET]
+
+customer_create:
+  path: api/customers-add
+  controller: App\Controller\CustomerController:addCustomerAction
+  methods: [POST]  
+
+customer_delete:
+  path: api/customers_delete/{id}
+  controller: App\Controller\CustomerController:deleteCustomerAction
+  methods: [GET]
+
+   
+
+customer_edit:
+  path: api/customers-edit
+  controller: App\Controller\CustomerController:editCustomerAction
+  methods: [POST]
+
+customer_filter:
+  path: api/customers-filter
+  controller: App\Controller\CustomerController:customerDataFilterAction
+  methods: [POST]
